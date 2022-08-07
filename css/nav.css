@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* global variables */
+* , *:after , *:before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-bg: #1f2937;
+    --poppins: 'Poppins', sans-serif;
+    --white: #fff;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: var(--poppins);
+    /* font-family: 'Poppins', sans-serif; */
+
+}
+
+header{
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 20px 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav{
+    list-style-type: none;
+}
+
+nav li{
+    margin-left: 15px;
+}
+
+/* navigation ends  */
+
+/* hamburger nav starts  */
+/* input#hamburger:checked ~ nav li{ */
+    /* color:green; */
+/* } */
+input#hamburger{
+    display: none;
+}
+label.nav-icon{
+    display: none;
+}
+
+@media screen and (max-width:767px){
+body{
+    overflow-x: hidden;
+    /* position: fixed; */
+}
+label.nav-icon{
+    display: block;
+}
+nav{
+    display: block;
+    /* position: absolute; */
+    position: fixed;
+    background-color: var(--dark-bg);
+    /* top: 55.59px; */
+    top: 36px;
+    height: 100vh;
+    /* height: 40vh; */
+    right: -250px;
+    width: 250px;
+    transition: right .5s ease-in;
+    /* overflow: hidden; */
+}
+label .fa-remove{
+    display: none;
+}
+input#hamburger:checked ~ label .fa-remove{
+    display: block;
+}
+input#hamburger:checked ~ label .fa-bars{
+    display: none;
+}
+
+input:checked ~ label ~ nav{
+    display: block;
+    right: 0;
+}
+
+.nav-item{
+    display: block;
+}
+
+.nav-item.flex {
+    flex-direction: row;
+    margin-top: 23px !important;
+    padding-top: 30px;
+    visibility: visible;
+}
+
+.flex1 {
+    flex-direction: row;
+}
+}
+
+/* input#hamburger:checked ~ label ~ nav{ */
+    /* right: 0; */
+/* } */
+
+/* text n img starts (banner) */ 
+.col{
+    width: 50%;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 70px 40px;
+}
+
+.text-col{
+    padding-right: 40px;
+}
+
+.dark-bg{
+    background-color: var(--dark-bg);
+}
+
+.light-text{
+    color: var(--white);
+}
+
+h1{
+    font-size: 35px;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    /* color: #333 !important; */
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-bottom: 10px;
+}
+
+/* Banner button styling  */
+
+button.btn{
+    box-shadow: none;
+    border: 0px solid transparent;
+    font-family: var(--poppins);
+    margin-top: 15px;
+    padding: 10px 32px;
+    background-color: bisque;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+}
+
+/* 4 boxes section  */
+.small{
+    font-size: 12px;
+}
+.center{
+    text-align: center;
+}
+
+.box{
+    padding: 5px;
+}
+
+.box img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0 50%;
+    border-radius: 5px;
+}
+
+.box p{
+    text-align: center;
+}
+
+.box-section{
+    margin-top: 40px;
+}
+
+/* Testimonial  */
+
+/* .testimonial .container { */
+    /* width: 100%; */
+    /* padding: 100px 40px; */
+/* } */
+
+.light-bg{
+    background-color: rgb(212, 212, 212);
+}
+
+/* CTA / Newsletter  */
+/* .cta-section{ */
+    /* background-color: #f5f5f5; */
+/* } */
+
+.cta-section .container{
+    background-color: rgb(197, 246, 248);
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+button.cta{
+    box-shadow: none;
+    border: 0px solid transparent;
+    font-family: var(--poppins);
+    margin-top: 15px;
+    padding: 10px 32px;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+}
+
+button.cta a{
+    text-decoration: none;
+}
+
+/* footer  */
+.footer{
+    background-color: var(--dark-bg);
+}
+
+.footer p{
+    color: var(--white);
+}
+
+.footer p a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--white);
+}
+
+section.footer{
+    padding: 20px 40px;
+}
+
+
+/* responsiveness */
+/* mobile responsiveness  <767px */
+@media screen and(max-width:767px) {
+    .flex{
+        flex-direction: column;
+    }
+    .nav-item.flex{
+        flex-direction: column;
+        margin-top: 30px;s
+    }
+}
+
+/* mobile responsiveness  <768px {ipad mini} */
+@media screen and (max-width:767px) {
+    .flex{
+        flex-direction: column;
+    }
+    .nav-item.flex{
+        flex-direction: row;
+        margin-top: 30px;
+    }
+    .banner .flex{
+        flex-direction: column-reverse;
+    }
+    section.banner{
+        padding: 0;
+    }
+    .col{
+        width: 100%;
+    }
+    .text-col{
+        padding: 40px;
+    }
+    .cta-section .container{
+        text-align: center;
+    }
+}
+
+/* tablet responsiveness  <768px to 1023px {ipad pro} */
+@media (min-width:768px) and (max-width:1023px){
+
+}
+
+/* tablet responsiveness  <1024px to 1199px {ipad pro} */
+@media (min-width:1024px) and (max-width:1199px){
+
+}
+
+/* works after 1200px  */
+@media screen and (min-width:1200px){
+
+}
